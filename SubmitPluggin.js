@@ -14,17 +14,16 @@ jQuery.fn.preventDoubleSubmission = function () {
             } else
             {
                 // Mark it so that the next submit can be ignored
-                console.log("submitted=true");
-                if(nbrerrors ==0)
+                
+                if(nbrerrors ==0)//il faut que le nombre d'erreurs soit à 0 pour considérer qu'on a soumis le formulaire
                 {
+                    console.log("submitted=true");
                     $form.data('submitted', true);
                 }
                 else
                 {
                     $form.data('submitted', false);   
                 }
-
-                
 
             }
         });

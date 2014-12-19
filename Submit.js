@@ -5,6 +5,8 @@
 
 var nbrerrors = 0;
 
+//Permet de renseigner le nbrerrors à chaque fois que la validation
+//se déroule avec le pluggin jquery validate
 $.validator.setDefaults({
              showErrors: function (errorMap, errorList) {
 
@@ -24,6 +26,7 @@ $(document).ready(
               
          try {
 
+             //Abonnement au submit pour éviter double soumission
              $('form').preventDoubleSubmission();
 
          }
