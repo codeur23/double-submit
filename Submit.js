@@ -8,16 +8,14 @@ var nbrerrors = 0;
 $.validator.setDefaults({
              showErrors: function (errorMap, errorList) {
 
-                 nbrERRORS = this.numberOfInvalids();
-                 console.log("validation avec nbrerrors = " + nbrERRORS);
+                 nbrerrors = this.numberOfInvalids();
+                 console.log("validation avec nbrerrors = " + nbrerrors);
                  this.defaultShowErrors();
              }
 });
 
-
-
 //permet d'éviter que l'on soumette deux fois 
-le formulaire par un click suivi immédiatement d'un autre click
+//le formulaire par un click suivi immédiatement d'un autre click
 $(document).ready(
 
  function () {
@@ -37,8 +35,6 @@ $(document).ready(
      } catch (e) {
 
      } 
-
-     
       
  }
 

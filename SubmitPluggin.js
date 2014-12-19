@@ -15,7 +15,15 @@ jQuery.fn.preventDoubleSubmission = function () {
             {
                 // Mark it so that the next submit can be ignored
                 console.log("submitted=true");
-                $form.data('submitted', true);
+                if(nbrerrors ==0)
+                {
+                    $form.data('submitted', true);
+                }
+                else
+                {
+                    $form.data('submitted', false);   
+                }
+
                 
 
             }
@@ -23,7 +31,7 @@ jQuery.fn.preventDoubleSubmission = function () {
 
 
     } catch (e) {
-        console.log("error in persosubmitpluggin");
+        console.log("error in preventDoubleSubmission");
     } 
         // Keep chainability
     return this;
